@@ -1,0 +1,23 @@
+# Print summary of the airquality dataset
+summary(airquality)
+
+# Extract the "Ozone" variable from the airquality dataset
+ozone <- airquality$Ozone
+
+# Calculate the mean
+mean_value <- mean(ozone, na.rm = TRUE)
+
+# Calculate the median
+median_value <- median(ozone, na.rm = TRUE)
+
+# Calculate the mode
+mode_value <- as.numeric(names(which.max(table(ozone))))
+
+# Calculate the range
+range_value <- range(ozone, na.rm = TRUE)
+
+# Print the mean, median, mode, and range for Ozone
+cat("Mean:", mean_value, "\n")
+cat("Median:", median_value, "\n")
+cat("Mode:", mode_value, "\n")
+cat("Range:", range_value[2] - range_value[1], "\n")
